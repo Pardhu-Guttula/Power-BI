@@ -1,0 +1,311 @@
+15/04/2024
+
+-Data visualization: 
+	- art+ science
+	- graphical representation
+	- convert large data into visuals
+
+Business Intelligence: 
+	- convert raw data into meaningful information to the business owner
+	- provide historical, current and predective views of business operations
+	- competetive market advantage:sharing relevant service to the customer
+
+- Business Analysis: give info that client doesnt know
+
+-PL-300 certification its weightage
+
+-Overview of data analysis
+	- art of story telling with data
+	- Five categories of analytics:
+		1. Descriptive - deatiled infor of all aspects
+		2. Diagnostic - strengths and weakness of business
+		3. Predictive - trend analysis
+		4. Prescriptive - what to do and how to do
+		5. Cognitive - ask ques of what client havent thought about
+
+Power BI:
+	- First name is Project Crescent
+
+Modules in Power BI:
+	- Power Query
+	- Power Pivot
+	- Power View
+	- Power Map
+	- Power BI SERVICE
+
+- Power Query:
+	- data cleaning
+
+- Power Pivot:
+	- brain
+ 	- Model data
+	- SET up relationships
+	- create measures
+	- Set KPI
+
+- Power View:
+	- Visualizations
+	- Types of vsiualizations
+	
+- Power BI SERVICE:
+	- collection of services
+	- like google drive
+	- Saas
+
+- Distinct: Counting each value once
+  Unique: Counting non-repetetive values only
+
+- Healthy business: stagnant unique count and a growing distinct count denotes healthy business
+
+- Filter -- EQUALS
+
+- Contains - 'IN'in SQL
+  Equals - is equal to
+
+- Filterd Rows:
+  Select Column > Arrow >Text Filter > Equals > give paramter
+
+- Merge Queries:
+  Select Column > Home > Merge queries
+
+- Granualarity - lowest level of data
+
+- Name of customers who returned:
+	- Go to Returns and then merge queries
+	- Select common table and merge tables
+	- We can see duplicates in cutomernames
+	- Remove duplicates by Column Name > Right click > Remove duplicates
+
+- Extract year from order id:
+	- Column > Transform > Extract> between delimeiters ----but it will change the column, so
+	- Now, use add column to solve this issue
+	- Column > Add Column > Extract > Text btw delimiters > Give delimiters > Rename > chaneg datatype to whole number 
+
+- Extract after year from order id:
+	- Column > Add Column > Extract > Text after delimiters > Give delimiters > Advanced options > Give delimiter > ok
+
+- Split Name to FirstName and LastName: 
+	-  Column > Transform > Split column > by delimiter > space > left > ok
+
+- Expand people table:
+	- Click Person > Home > Merge queries > Expand Orders > select Customer_ID > Remove deuplicates > Rename columns 
+
+- Replace values:
+	- Click the cell > right click > replace value 
+
+- Transform -- Add suffix:
+	- Column > transform > format > add suffix 
+
+- Date transformations:
+	- Column Name > Add column > Date > select 
+
+- Clustered bar chart - gives clear perception when multiple legends are present
+
+- 100% Stacked bar charts : micro, eg: petrol fluctuations
+	- It gives us the percentage that each category contributes.
+  Stacked bar charts : macro elements
+
+- Line charts: Done in collaboration to time period
+
+- Line charts with slicer:
+	- Line chart > Create one > 
+	- Add Slicer
+	- Slicer > Drag and drop columns > 
+
+- Ribbon Chart:
+	- In each year which category has more sales
+
+- Waterfall Chart: 
+	- To show negative contribution
+
+- Funnel Chart : For the purpose of percentile calculation
+
+- Scatter Chart: only chart which has 2 axes on opposite axes
+
+- Pie, Donot and Sunburst charts - Donot chart is superior to pie chart
+
+- Tree Map - It's like a hierarchy, uses drilldown 
+
+- Filter - end user can change
+  Slicer - end user cant change
+
+- Gauge - Create measures for min, max and tragte
+	- Home> New Measure > Create new like 'Min = 35000'
+
+-----------------------------------------------------------------------------------------------------------------
+
+16/04/24
+
+- Card: used for creating KPI's
+- KPI is like a metrics, used to measure efficiency. 
+
+- For even formatting : Format > Align > Distribute horizontally
+
+- After aligning cards, try to fit 4 charts, at most 6
+
+- Multi-row card: We can use multiple columns, we can drag multiple values 
+
+- KPI Visual: 
+	- Gives kpi of most recent year, use measure, changes color based on target given
+	- Trend analysis
+	
+- Date Hierachy is better for selecting multiple dates
+
+- Slicer > Format > Edit interaction - it effects the behaviour of other charts or cards
+	- Highlight
+	- Filter
+	- None
+
+- Matrix : 
+	- It's similar to pivot table
+	- It's much more advanced in hierarchy than normal tables
+
+- Advanced Visualization:
+	- Tooltip: Create tooltip by changing page information > allow tooltip 
+					      canvas setting > type > tooltip
+	- After creating a toottip, link that to any chart
+	- General > tooltips > page > select the tooltip
+
+- Conditional Formatting:
+	- Gradient
+	- Rules
+	- Tables
+
+
+- Welcome Page:
+	- ADD bg image
+	- Header
+	- Button, set action to buttons
+	- Always use shape at the back of button 
+	- Format > Send backward
+
+- View> Bookmarks, selection-unhide and hide the data
+
+- Drill Through:
+	- Used Page Layout which is already created
+	- Right bottom find for "Add drill-through fields here" > Drag and drop the required column there
+	- On the pie chart, right click on any category > drill through > page name
+	- If we dont want to right click, create a blank button, add action to the button
+	- Action > Drill Through > Page Name
+	- Always hide the drill through page, because the client shouldnot see the drill through page
+
+- Grouping and Binning:
+	- Create groups based on sub-category
+	- Bins based on row id
+
+- OLTP - Online Transaction Process => SQL
+- OLAP - Online Analysis Pricess => POWER BI
+- POS - Point of SALES
+
+- Facts - anything that is quantitative
+
+-Cross- filter direction, bidirectional cardinality
+ 
+
+-----------------------------------------------------------------------------------------------------------------
+
+17/04/2024
+
+- Why date document in drive
+- Datedimension using m-query
+
+- Date table is comtinous, serves for all columns related to date table
+
+- Calender - we need to give start and end date
+  calenderauto - it takes min and max date automatically
+
+- DAX: DATE functions
+	- DAYNAME - FORMAT(Datetable[Date],"dddd")
+	- Monthname - FORMAT(Datetable[Date], "mmmm")
+	- Datemonth = FORMAT(Datetable[Date],"dd-mmm")
+	- Dateonly = FORMAT(Datetable[Date],"dd")
+	- Year = YEAR(Datetable[Date])
+	- Qtr = QUARTER(Datetable[Date])
+	- Monthno = MONTH(Datetable[Date])
+	- Weekdayno = WEEKDAY(Datetable[Date],2)
+	- Weekno = WEEKNUM(Datetable[Date],11)
+	- Weekstatus = if(Datetable[Weekno]>5,"Weekend", "Weekday")
+
+Creating new table using M Query :
+	- Transform data > Home > New Source > Blank Query > Advanced Editor > Write M Query > Save 
+	- Manage Paramters > New Parameter > Give paramater > Name > suggested value > list of values >add values > default values> current values > save 
+	- Convert list to table	
+	- Add required columns 
+	- Save
+	- Go to power query > model view
+	- Join the table
+
+- Many-to-many :
+	- Load dataset
+	- Duplicate f&b
+	- Remove every column except the connecting column(location)
+	- Add loc_id by add column> custom
+	- merge queries
+
+- how to mitigate many to many tables?  using bridge table
+
+- DAX - Data Analysis Expression
+	- measures
+	- calculated columns and 
+	- calculated tables
+	- time-intelligence
+
+- calculated columns vs measures
+
+- Measures:
+	- always use aggregates with measures
+	- eg: discount in orders table
+	- Sum vs sumx : Sumx can take measures in formula
+
+- Calculate :
+	- Uses filter 
+	- Syntax: CALCULATE([FurnSales], FILTER(Orders,Orders[Order Date].[Year]=2014))
+	- ALL - All the rows wont be affected
+	- Rankx : Rank based on the condition given
+	- Rankx(ALLSELECTED()) - Gives dynamic rank
+
+- Dense - IF 2 ppl have same rank,the rank for both will be same and next rank will be skipped
+- Skip - IF 2 ppl have same rank
+
+- Dynamic Operations using slicer:
+	- Create a slicer
+	- Create a card
+	- New measure > Selval = "The selected sub-category is " & SELECTEDVALUE(Orders[Sub-Category],"Nothing")
+	- Drag and drop selval in card
+	- create a barchart of sales and products
+	- Barchart > Title > Fx > Select measure name 
+
+- Create datetable > add date, dayname, month, year, qtr
+
+- Timeseries:
+	- year, qt, month, day, prevday, prevmnth, prevdaymnth, prev15days etc
+	- Prevday = CALCULATE([Sumsales],PREVIOUSDAY(Datetable[Date]))
+	- prevdaymnth = CALCULATE([Sumsales],DATEADD(Datetable[Date],-1,MONTH))
+
+
+- ytd : starts every year till current day - gives cummulative
+	ytd = TOTALYTD([Sumsales],Datetable[Date])
+  qtd : starts every quarter till current day - gives cummulative
+	QTD = TOTALQTD([Sumsales],Datetable[Date])
+  mtd : starts every month till current day - gives cummulative
+	MTD = TOTALMTD([Sumsales],Datetable[Date])
+
+- Cummulative total - gives cummulative total till the end 
+	cummtotal = CALCULATE([Sumsales],FILTER(All(Datetable[Date]),Datetable[Date]<MAX(Datetable[Date])))
+  Cummulative fixed total:
+	- gives cummulative total till a fixed date
+	- Create a measure with fixed date >  give a date
+	- cummfixdate = if(SELECTEDVALUE(Datetable[Date]) <= [fixeddate],[cummtotal])
+
+- Same period last year - prevyearday + prevdaymnth + prevqtrday
+	- It works on all heirachies
+	- But only for one year
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+18/04/24
+
+
+
+

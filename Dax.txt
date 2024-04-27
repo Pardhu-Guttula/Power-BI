@@ -1,0 +1,59 @@
+	
+DAX:
+	Multiplication - agg
+	Sub - No agg
+	
+Adding New column
+	DayName = Format(DateTable[Date],"dd")		01
+									  ddd		Mon
+									  dddd		Monday
+	DayName = Day(DateTable[Date])
+	
+	WeekNo = Weeknum(DateTable[Date], 11) 		week starts from Monday
+	WeekDayNo = WeekDay(", 2)					mon-sun
+	
+	
+How to mitigate many to many relationship
+	- by using bridge table 	[ex: part-5 2:13:55]
+	
+Sum can do sum of sales in orders table	[ex: SumSales1 is a measure of sum(orders[sales])]
+SUMX can do product of measure and normalcol [ex: Sumx(Orders, [SumSales1] * sum(Orders[quantity]))]	Summation is required
+
+SUMX can do diff b/w measure and normalcol 	 [ex: Sumx(Orders, [SumSales1] - Orders[Discount]))			Summation is not required
+
+for the above case normalcol can be used in measure without summation can be used only in sumx. If there is no use of sumx then that particulat column should be 
+provided with summation of that column.		[This case can happen only the operator used in formula is "-"]
+
+
+
+- If no effect should be done on column name, then we can use this formula:
+	- calculate([sumsales1],all(Orders))			All columns in Orders table will not get effected
+	
+	
+RANK:
+	- RANKX(All(Orders[Sub-Category]),[SumSales1],,Desc)          By default - descending order
+Dynamic Rank: [Giving Rank based on output obtained]
+	- RANKX(AllSelected(Order[Sub-Category]),[SumSales1])
+	
+	- SelectedValue = "Any text" & SelectedValue(Orders[Sub-Category],"Nothing")
+	- PrevDay = calculate([SumSales], PreviousDay(DateTable[Date]))
+	- PrevDayMonth = calculate([SumSales1], DateAdd(DateTable[Date], -1, Month))
+	- YTD = TotalYtd([SumSales1], DateTable[Date])			[Starting of year till current Date]
+	- MTD = TotalMtd([SumSales1], DateTable[Date])			[Starting of Month till Date]
+	- CummTotal = Calculate([SumSales1], Filter(All(DateTable),DateTable[Date] <= Max(DateTable[Date])))
+	- CummFixedTotal = If(SelectedValue(DateTable[Date])<=[FixedDate],[CummTotal])
+	- Spyl = calculate([sumsales1], SamePeriodLastYear(DateTable[Date]))
+	
+	https://github.com/microsoft/powerbi-desktop-samples
+	
+
+Power BI
+	- Visualizations when & where to use
+	- Visualizations when & where to use
+	- One report
+	- 7 min report making video, how to use suggesting questions
+	- Data story telling
+	- case study
+	
+Automate Fully
+	- changing data in our personal laptop, it should reflect in power bi online server 

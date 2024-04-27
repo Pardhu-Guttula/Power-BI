@@ -1,0 +1,207 @@
+15/04/2024
+
+-Data visualization: 
+	- art+ science
+	- graphical representation
+	- convert large data into visuals
+
+Business Intelligence: 
+	- convert raw data into meaningful information to the business owner
+	- provide historical, current and predective views of business operations
+	- competetive market advantage:sharing relevant service to the customer
+
+- Business Analysis: give info that client doesnt know
+
+-PL-300 certification its weightage
+
+-Overview of data analysis
+	- art of story telling with data
+	- Five categories of analytics:
+		1. Descriptive - deatiled infor of all aspects
+		2. Diagnostic - strengths and weakness of business
+		3. Predictive - trend analysis
+		4. Prescriptive - what to do and how to do
+		5. Cognitive - ask ques of what client havent thought about
+
+Power BI:
+	- First name is Project Crescent
+
+Modules in Power BI:
+	- Power Query
+	- Power Pivot
+	- Power View
+	- Power Map
+	- Power BI SERVICE
+
+- Power Query:
+	- data cleaning
+
+- Power Pivot:
+	- brain
+ 	- Model data
+	- SET up relationships
+	- create measures
+	- Set KPI
+
+- Power View:
+	- Visualizations
+	- Types of vsiualizations
+	
+- Power BI SERVICE:
+	- collection of services
+	- like google drive
+	- Saas
+
+- Distinct: Counting each value once
+  Unique: Counting non-repetetive values only
+
+- Healthy business: stagnant unique count and a growing distinct count denotes healthy business
+
+- Filter -- EQUALS
+
+- Contains - 'IN'in SQL
+  Equals - is equal to
+
+- Filterd Rows:
+  Select Column > Arrow >Text Filter > Equals > give paramter
+
+- Merge Queries:
+  Select Column > Home > Merge queries
+
+- Granualarity - lowest level of data
+
+- Name of customers who returned:
+	- Go to Returns and then merge queries
+	- Select common table and merge tables
+	- We can see duplicates in cutomernames
+	- Remove duplicates by Column Name > Right click > Remove duplicates
+
+- Extract year from order id:
+	- Column > Transform > Extract> between delimeiters ----but it will change the column, so
+	- Now, use add column to solve this issue
+	- Column > Add Column > Extract > Text btw delimiters > Give delimiters > Rename > chaneg datatype to whole number 
+
+- Extract after year from order id:
+	- Column > Add Column > Extract > Text after delimiters > Give delimiters > Advanced options > Give delimiter > ok
+
+- Split Name to FirstName and LastName: 
+	-  Column > Transform > Split column > by delimiter > space > left > ok
+
+- Expand people table:
+	- Click Person > Home > Merge queries > Expand Orders > select Customer_ID > Remove deuplicates > Rename columns 
+
+- Replace values:
+	- Click the cell > right click > replace value 
+
+- Transform -- Add suffix:
+	- Column > transform > format > add suffix 
+
+- Date transformations:
+	- Column Name > Add column > Date > select 
+
+- Clustered bar chart - gives clear perception when multiple legends are present
+
+- 100% Stacked bar charts : micro, eg: petrol fluctuations
+	- It gives us the percentage that each category contributes.
+  Stacked bar charts : macro elements
+
+- Line charts: Done in collaboration to time period
+
+- Line charts with slicer:
+	- Line chart > Create one > 
+	- Add Slicer
+	- Slicer > Drag and drop columns > 
+
+- Ribbon Chart:
+	- In each year which category has more sales
+
+- Waterfall Chart: 
+	- To show negative contribution
+
+- Funnel Chart : For the purpose of percentile calculation
+
+- Scatter Chart: only chart which has 2 axes on opposite axes
+
+- Pie, Donot and Sunburst charts - Donot chart is superior to pie chart
+
+- Tree Map - It's like a hierarchy, uses drilldown 
+
+- Filter - end user can change
+  Slicer - end user cant change
+
+- Gauge - Create measures for min, max and tragte
+	- Home> New Measure > Create new like 'Min = 35000'
+
+-----------------------------------------------------------------------------------------------------------------
+
+16/04/24
+
+- Card: used for creating KPI's
+- KPI is like a metrics, used to measure efficiency. 
+
+- For even formatting : Format > Align > Distribute horizontally
+
+- After aligning cards, try to fit 4 charts, at most 6
+
+- Multi-row card: We can use multiple columns, we can drag multiple values 
+
+- KPI Visual: 
+	- Gives kpi of most recent year, use measure, changes color based on target given
+	- Trend analysis
+	
+- Date Hierachy is better for selecting multiple dates
+
+- Slicer > Format > Edit interaction - it effects the behaviour of other charts or cards
+	- Highlight
+	- Filter
+	- None
+
+- Matrix : 
+	- It's similar to pivot table
+	- It's much more advanced in hierarchy than normal tables
+
+- Advanced Visualization:
+	- Tooltip: Create tooltip by changing page information > allow tooltip 
+					      canvas setting > type > tooltip
+	- After creating a toottip, link that to any chart
+	- General > tooltips > page > select the tooltip
+
+- Conditional Formatting:
+	- Gradient
+	- Rules
+	- Tables
+
+
+- Welcome Page:
+	- ADD bg image
+	- Header
+	- Button, set action to buttons
+	- Always use shape at the back of button 
+	- Format > Send backward
+
+- View> Bookmarks, selection-unhide and hide the data
+
+- Drill Through:
+	- Used Page Layout which is already created
+	- Right bottom find for "Add drill-through fields here" > Drag and drop the required column there
+	- On the pie chart, right click on any category > drill through > page name
+	- If we dont want to right click, create a blank button, add action to the button
+	- Action > Drill Through > Page Name
+	- Always hide the drill through page, because the client shouldnot see the drill through page
+
+- Grouping and Binning:
+	- Create groups based on sub-category
+	- Bins based on row id
+
+- OLTP - Online Transaction Process => SQL
+- OLAP - Online Analysis Pricess => POWER BI
+- POS - Point of SALES
+
+- Facts - anything that is quantitative
+
+-Cross- filter direction, bidirectional cardinality
+ 
+
+
+
+

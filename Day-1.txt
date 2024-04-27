@@ -1,0 +1,65 @@
+5 things:
+- Descriptive	
+- Diagnostic	Problem finding
+- Predictive	Trend analytics
+- Prescriptive	What and how to do
+- Cognitive		Something client didn't thought about
+
+
+
+Power query - cleaning of data
+Power pivot - Brain of power bi
+Power view	- End user will see this visualiazation
+
+Power Bi services:
+	- End user can login power bi account in google can view the report. [Software as a service]
+	
+	
+Distinct & Unique
+	Distinct - counting each value once = 9
+	Unique - counting non repetitve values only = 6
+	
+ALways remove duplicates from id cols
+
+
+region - sales 
+quantitave - will go to second axis [sales]
+
+Dont use red, yellow, green
+
+
+
+macro - there is an increase in sales in petrol [shows the growth]  Normal Stacked
+micro - why [reason] 100% stacked
+
+Line chart:
+	- Time series Analysis [Date]
+	
+	
+Ribbon chart:
+	What shares we invest at
+	On What products are necessary to invest
+	
+Waterfall chart:
+	Contribution is done   [Whether negative or positive]
+	
+Funnel chart:
+	- To compare percentile
+	
+Scatter chart:
+	- Two quantitative comes in opposite axis i.r x,y axis	[Sales,Profit]
+	- In play axis blindly keep date
+	
+	
+Card
+KPI - is the actual image of the company
+
+
+Between visuals - 3 types of hierarchies
+	filter, highlight, none
+Between slicer and card - 2 types
+	filter and none
+	
+
+	
+	
